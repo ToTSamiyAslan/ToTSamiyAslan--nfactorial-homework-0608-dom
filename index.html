@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Video</title>
+    <link rel="stylesheet" href="index.css">
+    <!-- <link rel="stylesheet" href="/css/all.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="hero">
+        <video id="back-video" muted>
+            <source src="files/guy.mp4">
+        </video>
+        <audio src="files/guyMusic.mp3" paused id="back-music"></audio>
+        <div class="container">
+            <div class = "buttons">
+                <button id="stop" onclick="playVideo()">
+                    <i class="fa-solid fa-play " style="color: white;"></i>
+                </button>
+                <input type="range" id = "time" class="slider" min = "0" max = "100" step = "0.01" value="0" style="width: 300px;">
+            </div>
+            <div class="video-progress">
+                <button id = "music" onclick="playMusic()">
+                    <i class="fa-solid fa-music" style = "color: white;"></i>
+                </button>
+                <input type="range" id = "volume" min = "0" max = "1" step = "0.01" value="0.5">
+            </div>
+        </div>
+    </div>
+    <script src="index.js">
+    </script>
+</body>
+
+</html>
